@@ -10,10 +10,11 @@ import Foundation
 
 
 struct StoryBrain {
-    var questionNumber = 0
-    var score = 0
+    var storiesNumber = 0
     
-    let quiz = [
+    
+    let stories =
+        [
         Story(
         title: "Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: 'Need a ride, boy?'.",
         choice1: "I'll hop in. Thanks for the help!",
@@ -49,6 +50,19 @@ struct StoryBrain {
         choice1: "The", choice2: "End", choice1Destination: 0, choice2Destination: 0
     )
     ]
+    
+    func getStoriesText() -> String {
+        return stories[storiesNumber].title
+    }
+    
+    mutating func nextStories() {
+        if storiesNumber + 1 < stories.count {
+            storiesNumber += 1
+        } else {
+            storiesNumber = 0
+            
+        }
+    }
     
     
 }

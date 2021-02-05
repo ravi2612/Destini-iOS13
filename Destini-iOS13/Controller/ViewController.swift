@@ -18,17 +18,27 @@ class ViewController: UIViewController {
     var storybrain = StoryBrain()
     
     override func viewDidLoad() {
-        _ = Story(title: "You see a fork in the road", choice1: "Take a left", choice2: "Take a right", choice1Destination:  1, choice2Destination: 1)
         
-        
-       
         super.viewDidLoad()
+        
+        updateUI()
+        
+        
 
     }
     @IBAction func choiceMade(_ sender: UIButton) {
         
+        //storybrain.getStoriesText()
+        
+    }
+    
+    @objc func updateUI(){
+        storyLabel.text = storybrain.getStoriesText()
+       // choice1Button.title(for: UIButton.State.normal) = storybrain.stories[]
     }
 
+    
+    
 
 }
 
