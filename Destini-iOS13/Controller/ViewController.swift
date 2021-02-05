@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         _ = Story(title: "You see a fork in the road", choice1: "Take a left", choice2: "Take a right", choice1Destination:  1, choice2Destination: 1)
         
         
-        
+       
         super.viewDidLoad()
 
     }
