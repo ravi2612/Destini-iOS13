@@ -15,26 +15,26 @@ struct StoryBrain {
     var num = 0
     let stories = [
         Story(
-            t: "You see a fork in the road",//[1][1]
+            t: "You see a fork in the road",//[1]
             c1: "Take left",
             c2: "Take right",
             cd1: 1,
-            cd2: 2//[1][2]
-            ),//[1][3]
+            cd2: 2
+            ),
         Story(
-            t: "You see a tiger ",//[2][1]
+            t: "You see a tiger ",//[2]
             c1: "Shout for help",
             c2: "Play dead.",
             cd1: 3,
-            cd2: 4//[2][2]
-            ),//[2][3]
+            cd2: 4
+            ),
         Story(
-            t: "You find a treasure chest",//[3][1]
+            t: "You find a treasure chest",//[3]
             c1: "Open it. ",
             c2: "Check for traps",
             cd1: 5,
-            cd2: 6//[3][2]
-            )//[3][3]
+            cd2: 6
+            )
     ]
     
     func getQuestionText() -> String {
