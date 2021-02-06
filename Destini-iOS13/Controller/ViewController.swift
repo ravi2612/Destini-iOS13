@@ -25,13 +25,33 @@ class ViewController: UIViewController {
         updateUI()
     }
     @IBAction func choiceMade(_ sender: UIButton) {
+        
+        let userAnswer = sender.currentTitle!
+        
+        let userChoice = storyBrain.checkChoice(userAnswer: userAnswer)
+        
+        if userChoice == 1 {
+            storyLabel.text = storyBrain.stories[1].title
+            choice1Button.setTitle(storyBrain.stories[1].choice1, for: .normal)
+            choice2Button.setTitle(storyBrain.stories[1].choice2, for: .normal )
+            
+        }else {
+            storyLabel.text = storyBrain.stories[2].title
+            choice1Button.setTitle(storyBrain.stories[2].choice1, for: .normal)
+            choice2Button.setTitle(storyBrain.stories[2].choice2, for: .normal)
+        }
+        
+        
        
+       
+        
     }
     
     @objc func updateUI(){
         storyLabel.text = storyBrain.getQuestionText()
         choice1Button.setTitle(storyBrain.getChoiceText1(), for: .normal)
         choice2Button.setTitle(storyBrain.getChoiceText2(), for: .normal)
+        
         
     }
 
